@@ -28,6 +28,19 @@ p <- htmlwidgets::appendContent(p, htmltools::tags$p("Source: UNHCR Refugee Data
 
 p
 
+## The following section will create a shiny tool
+# ui = shinyUI(fluidPage(
+  
+#   h3("Human Displacement 2020", style="text-align:left"),
+#   h4("In 2020, there were 18.9 million refugees under UNHCR's mandate.  Three quarters of these refugees were come from Syrian, Afghanistan, South Sudan, Myanmar, Somalia, and DR of Congo due to wars.  Most often, refugees were hosted by neighbouring or nearby countriies.    "),
+#   h5("Source: UNHCR Refugee Data Finder https://www.unhcr.org/refugee-statistics/download/?url=5I6XeJ", style="text-align:left"),
+  
+#   sankeyNetworkOutput('sankey')
+# ))
 
+# server = function(input, output) {
+#   output$sankey <- renderSankeyNetwork(p)
+# }
 
+# shinyApp(ui = ui, server = server)
 
