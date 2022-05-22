@@ -1,4 +1,4 @@
-lib = c("tidyverse","networkD3", "htmlwidgets", "htmltools")
+lib = c("tidyverse","networkD3", "htmlwidgets", "htmltools", "magrittr")
 lapply(lib, require, character.only = TRUE) 
 
 links = read.csv("HD.csv", header = T)
@@ -26,7 +26,12 @@ p <- htmlwidgets::prependContent(p, htmltools::tags$h2("Human Displacement 2020"
 p <- htmlwidgets::prependContent(p, htmltools::tags$h4("In 2020, there were 18.9 million refugees under UNHCR's mandate.  Three quarters of these refugees were come from Syrian, Afghanistan, South Sudan, Myanmar, Somalia, and DR of Congo due to wars.  Most often, refugees were hosted by neighbouring or nearby countries." , style = "font-family: Arial"))
 p <- htmlwidgets::appendContent(p, htmltools::tags$p("Source: UNHCR Refugee Data Finder https://www.unhcr.org/refugee-statistics/download/?url=5I6XeJ", style = "font-family: Arial"))
 
-p
+# Save the output to html file.
+# saveNetwork(network, file, selfcontained = T)
+# network is the sankey output, here it is "p". 
+# file is the html file that is going to create. Give it a file name.
+
+saveNetwork(p, file="HD1.html", selfcontained = TRUE)
 
 ## The following section will create a shiny tool
 # ui = shinyUI(fluidPage(
@@ -43,4 +48,5 @@ p
 # }
 
 # shinyApp(ui = ui, server = server)
+
 
