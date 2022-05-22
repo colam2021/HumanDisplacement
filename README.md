@@ -7,3 +7,5 @@ Will it be the same as the one I create in Tableau? Which one will be easier to 
 
 Eventually, I found it is easier to create a sankey chart by using R.  Also, it is possible to turn the result into  
 an interactive chart with Shiny.  However, the look of the chart is different from the tableau version. 
+
+![alt text](https://github.com/colam2021/HumanDisplacement/blob/main/image.png)
